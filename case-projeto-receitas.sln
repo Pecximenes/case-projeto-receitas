@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoReceitas", "ProjetoReceitas\ProjetoReceitas.csproj", "{3AA9374E-E6F8-520A-16D9-907EFF692254}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectRecipe", "ProjectRecipe\ProjectRecipe.csproj", "{908AE997-0F2F-F6E8-3CCD-6840B9504D6A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -10,15 +10,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3AA9374E-E6F8-520A-16D9-907EFF692254}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3AA9374E-E6F8-520A-16D9-907EFF692254}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3AA9374E-E6F8-520A-16D9-907EFF692254}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3AA9374E-E6F8-520A-16D9-907EFF692254}.Release|Any CPU.Build.0 = Release|Any CPU
+		{908AE997-0F2F-F6E8-3CCD-6840B9504D6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{908AE997-0F2F-F6E8-3CCD-6840B9504D6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{908AE997-0F2F-F6E8-3CCD-6840B9504D6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{908AE997-0F2F-F6E8-3CCD-6840B9504D6A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {4C8C5BF7-1783-4DB4-A12B-F9C4AF4692F0}
+		SolutionGuid = {B4F01DE8-704F-439C-A43B-F5AF093A20B0}
 	EndGlobalSection
 EndGlobal
