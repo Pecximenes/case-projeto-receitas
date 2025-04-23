@@ -1,0 +1,19 @@
+version: "3.3"
+
+services:
+  db:
+    container_name: db_projeto_receitas
+    image: postgres:15.4-alpine
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_USER: case_projeto_receitas
+      POSTGRES_DB: db_receitas
+      TZ: "America/Sao_Paulo"
+    ports:
+      - 5437:5432
+    volumes:
+      - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+#
+# Use this PostgreSQL url to connect to the database:
+# postgresql://case_projeto_receitas:123456@localhost:5437/db_receitas
