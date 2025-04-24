@@ -1,12 +1,11 @@
 {
   "Version": 1,
-  "Hash": "Bj8AmuVa5N7OjpCmwg9UYk1zH7iDDJFcPlBTiNNKYjc=",
+  "Hash": "O5AFH06khyo2j73zzbs2da8A4q/ezBbXZB8UUJ3fHVI=",
   "Source": "ProjectRecipe",
   "BasePath": "_content/ProjectRecipe",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "Assets": []
 }

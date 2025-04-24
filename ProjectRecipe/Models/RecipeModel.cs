@@ -2,22 +2,25 @@ namespace Recipe.Models;
 
 public class RecipeModel
 {
-    public RecipeModel(string name)
+    public RecipeModel(string name, string preparationMethod)
     {
-        Name = name;
         Id = Guid.NewGuid();
+        Name = name;
+        PreparationMethod = preparationMethod;
     }
 
     public Guid Id { get; set; }
     public string Name { get; private set; }
+    public string PreparationMethod { get; private set; }
 
     public void ChangeName(string name)
     {
         Name = name;
     }
-
-    public void SetInactive()
+    public void ChangePreparationMethod(string preparationMethod)
     {
-        Name = "desativado";
+        PreparationMethod = preparationMethod;
     }
 }
+
+public record RecipeRequest(string name, string preparationMethod);

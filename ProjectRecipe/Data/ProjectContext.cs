@@ -15,3 +15,29 @@ public class ProjectContext : DbContext
         base.OnConfiguring(optionsBuilder);
     }
 }
+
+
+
+// public class ProjectContext : DbContext
+// {
+//     public DbSet<RecipeModel> Recipe { get; set; }
+//     public DbSet<IngredientModel> Ingredient { get; set; }
+//     // public DbSet<ReceipeIngredientModel> RecipeIngredient { get; set; }
+
+//     // public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) {}
+
+//     protected override void OnModelCreating(ModelBuilder modelBuilder)
+//     {
+//         // modelBuilder.Entity<ReceitaIngrediente>()
+//         //     .HasOne(ri => ri.Receita)
+//         //     .WithMany(r => r.ReceitaIngredientes)
+//         //     .HasForeignKey(ri => ri.ReceitaId)
+//         //     .OnDelete(DeleteBehavior.Cascade);
+
+//         // modelBuilder.Entity<ReceitaIngrediente>()
+//         //     .HasOne(ri => ri.Ingrediente)
+//         //     .WithMany(i => i.ReceitaIngredientes)
+//         //     .HasForeignKey(ri => ri.IngredienteId)
+//         //     .OnDelete(DeleteBehavior.Cascade);
+//     }
+// }

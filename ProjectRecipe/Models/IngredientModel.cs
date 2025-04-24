@@ -2,24 +2,26 @@ namespace Ingredient.Models;
 
 public class IngredientModel
 {
-    public IngredientModel(string name)
+    public IngredientModel(string name, string unitOfMeasurement)
     {
-        Name = name;
         Id = Guid.NewGuid();
+        Name = name;
+        UnitOfMeasurement = unitOfMeasurement;
     }
 
     public Guid Id { get; set; }
     public string Name { get; private set; }
+    public string UnitOfMeasurement { get; private set; }
 
     public void ChangeName(string name)
     {
         Name = name;
     }
 
-    public void SetInactive()
+    public void ChangeUnitOfMeasurement(string unitOfMeasurement)
     {
-        Name = "desativado";
+        UnitOfMeasurement = unitOfMeasurement;
     }
-
-
 }
+
+public record IngredientRequest(string name, string unitOfMeasurement);

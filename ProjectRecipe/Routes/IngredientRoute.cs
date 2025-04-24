@@ -13,7 +13,7 @@ public static class IngredientRoute
         route.MapPost("",
             async (IngredientRequest req, ProjectContext context) =>
             {
-                var ingredientName = new IngredientModel(req.name);
+                var ingredientName = new IngredientModel(req.name, req.unitOfMeasurement);
                 await context.AddAsync(ingredientName);
                 await context.SaveChangesAsync(); //Commit para o Banco de Dados
             });
@@ -34,6 +34,7 @@ public static class IngredientRoute
                     return Results.NotFound();
                 
                 ingredient.ChangeName(req.name);
+                ingredient.ChangeUnitOfMeasurement(req.unitOfMeasurement);
                 await context.SaveChangesAsync();
                 return Results.Ok(ingredient);
             });

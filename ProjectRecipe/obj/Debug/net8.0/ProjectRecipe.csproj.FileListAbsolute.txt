@@ -134,6 +134,3 @@
 /home/pedro/Documentos/Projeto-DevOps/case-projeto-receitas/ProjectRecipe/bin/Debug/net8.0/runtimes/win-arm64/native/e_sqlite3.dll
 /home/pedro/Documentos/Projeto-DevOps/case-projeto-receitas/ProjectRecipe/bin/Debug/net8.0/runtimes/win-x64/native/e_sqlite3.dll
 /home/pedro/Documentos/Projeto-DevOps/case-projeto-receitas/ProjectRecipe/bin/Debug/net8.0/runtimes/win-x86/native/e_sqlite3.dll
-/home/pedro/Documentos/Projeto-DevOps/case-projeto-receitas/ProjectRecipe/bin/Debug/net8.0/ProjectRecipe.staticwebassets.endpoints.json
-/home/pedro/Documentos/Projeto-DevOps/case-projeto-receitas/ProjectRecipe/obj/Debug/net8.0/staticwebassets.build.endpoints.json
-/home/pedro/Documentos/Projeto-DevOps/case-projeto-receitas/ProjectRecipe/obj/Debug/net8.0/staticwebassets/msbuild.ProjectRecipe.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
