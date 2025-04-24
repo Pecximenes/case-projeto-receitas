@@ -1,6 +1,7 @@
 using ProjectRecipesss.Data;
 using Ingredient.Routes;
 using Recipe.Routes;
+using RecipeIngredient.Routes;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,6 +21,7 @@ if (app.Environment.IsDevelopment())
 
 app.IngredientRoutes();
 app.RecipeRoutes();
+// app.RecipeIngredientRoutes();
 
 app.UseHttpsRedirection();
 app.Run();

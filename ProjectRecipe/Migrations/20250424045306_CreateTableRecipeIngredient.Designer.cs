@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProjectRecipesss.Data;
 
@@ -10,9 +11,11 @@ using ProjectRecipesss.Data;
 namespace ProjectRecipe.Migrations
 {
     [DbContext(typeof(ProjectContext))]
-    partial class ProjectContextModelSnapshot : ModelSnapshot
+    [Migration("20250424045306_CreateTableRecipeIngredient")]
+    partial class CreateTableRecipeIngredient
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.10");
@@ -33,7 +36,7 @@ namespace ProjectRecipe.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Ingredient");
+                    b.ToTable("Ingredients");
                 });
 
             modelBuilder.Entity("Recipe.Models.RecipeModel", b =>
@@ -52,7 +55,7 @@ namespace ProjectRecipe.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Recipe");
+                    b.ToTable("Recipes");
                 });
 
             modelBuilder.Entity("RecipeIngredient.Models.RecipeIngredientModel", b =>
@@ -76,7 +79,7 @@ namespace ProjectRecipe.Migrations
 
                     b.HasIndex("RecipeModelId");
 
-                    b.ToTable("RecipeIngredient");
+                    b.ToTable("RecipeIngredientModel");
                 });
 
             modelBuilder.Entity("RecipeIngredient.Models.RecipeIngredientModel", b =>

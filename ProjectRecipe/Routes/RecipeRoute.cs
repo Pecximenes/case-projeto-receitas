@@ -13,7 +13,7 @@ public static class ProjectRecipeRoute
         route.MapPost("",
             async (RecipeRequest req, ProjectContext context) =>
             {
-                var recipe = new RecipeModel(req.name, req.preparationMethod);
+                var recipe = new RecipeModel(req.name, req.preparationMethod, req.ingredients);
                 await context.AddAsync(recipe);
                 await context.SaveChangesAsync(); //Commit para o Banco de Dados
             });
@@ -35,6 +35,7 @@ public static class ProjectRecipeRoute
                 
                 recipe.ChangeName(req.name);
                 recipe.ChangePreparationMethod(req.preparationMethod);
+                recipe.ChangeIngredients(req.ingredients);
                 await context.SaveChangesAsync();
                 return Results.Ok(recipe);
             });
