@@ -1,11 +1,13 @@
 using Microsoft.EntityFrameworkCore;
-using ProjectRecipe.Models;
+using Ingredient.Models;
+using Recipe.Models;
 
-namespace ProjectRecipe.Data;
+namespace ProjectRecipesss.Data;
 
-public class ProjectRecipeContext : DbContext
+public class ProjectContext : DbContext
 {
-    public DbSet<ProjectRecipeModel> Ingredient { get; set; }
+    public DbSet<IngredientModel> Ingredient { get; set; }
+    public DbSet<RecipeModel> Recipe { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {

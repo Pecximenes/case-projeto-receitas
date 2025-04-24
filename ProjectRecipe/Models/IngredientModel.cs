@@ -1,8 +1,8 @@
-namespace ProjectRecipe.Models;
+namespace Ingredient.Models;
 
-public class ProjectRecipeModel
+public class IngredientModel
 {
-    public ProjectRecipeModel(string name)
+    public IngredientModel(string name)
     {
         Name = name;
         Id = Guid.NewGuid();

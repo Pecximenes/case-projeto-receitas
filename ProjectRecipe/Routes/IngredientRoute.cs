@@ -1,32 +1,32 @@
 using Microsoft.EntityFrameworkCore;
-using ProjectRecipe.Data;
-using ProjectRecipe.Models;
+using ProjectRecipesss.Data;
+using Ingredient.Models;
 
-namespace ProjectRecipe.Routes;
+namespace Ingredient.Routes;
 
-public static class ProjectRecipeRoute
+public static class IngredientRoute
 {
-    public static void ProjectRecipeRoutes(this WebApplication app)
+    public static void IngredientRoutes(this WebApplication app)
     {   
-        var route = app.MapGroup("ProjectRecipe");
+        var route = app.MapGroup("Ingredients");
         // app.MapGet("ProjectRecipe", () => new ProjectRecipeModel("farinha"));
         route.MapPost("",
-            async (ProjectRecipeRequest req, ProjectRecipeContext context) =>
+            async (IngredientRequest req, ProjectContext context) =>
             {
-                var ingredientName = new ProjectRecipeModel(req.name);
+                var ingredientName = new IngredientModel(req.name);
                 await context.AddAsync(ingredientName);
                 await context.SaveChangesAsync(); //Commit para o Banco de Dados
             });
         
         route.MapGet("",
-            async (ProjectRecipeContext context) => 
+            async (ProjectContext context) => 
             {
                 var ingredientList = await context.Ingredient.ToListAsync();
                 return Results.Ok(ingredientList);
             });
         
         route.MapPut("{id:guid}",
-            async (Guid id, ProjectRecipeRequest req, ProjectRecipeContext context) => 
+            async (Guid id, IngredientRequest req, ProjectContext context) => 
             {
                 var ingredient = await context.Ingredient.FirstOrDefaultAsync(x => x.Id == id);
 
@@ -39,7 +39,7 @@ public static class ProjectRecipeRoute
             });
         
         route.MapDelete("{id:guid}",
-            async (Guid id, ProjectRecipeContext context) =>
+            async (Guid id, ProjectContext context) =>
             {
                 var ingredient = await context.Ingredient.FirstOrDefaultAsync(x => x.Id == id);
 

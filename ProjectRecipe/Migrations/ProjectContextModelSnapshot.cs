@@ -2,25 +2,22 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using ProjectRecipe.Data;
+using ProjectRecipesss.Data;
 
 #nullable disable
 
 namespace ProjectRecipe.Migrations
 {
-    [DbContext(typeof(ProjectRecipeContext))]
-    [Migration("20250423184034_Initial")]
-    partial class Initial
+    [DbContext(typeof(ProjectContext))]
+    partial class ProjectContextModelSnapshot : ModelSnapshot
     {
-        /// <inheritdoc />
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.10");
 
-            modelBuilder.Entity("ProjectRecipe.Models.ProjectRecipeModel", b =>
+            modelBuilder.Entity("Ingredient.Models.IngredientModel", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -33,6 +30,21 @@ namespace ProjectRecipe.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Ingredient");
+                });
+
+            modelBuilder.Entity("Recipe.Models.RecipeModel", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Recipe");
                 });
 #pragma warning restore 612, 618
         }
